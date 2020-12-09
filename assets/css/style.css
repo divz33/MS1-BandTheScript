@@ -418,12 +418,12 @@ html {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 5px 5px;
+    padding: 5px 10px;
     border: 2px solid #262626;
     margin-top: 5px;
     font-size: 10px;
     transition: .5s;
-    /*float: right;*/
+    float: right;
 
 }
 
@@ -433,19 +433,156 @@ html {
     border-color: #e91e63;
 }
 
-/*==============================MusicAlbum===========================*/
+@media (max-width: 992px) {
+    #tour .tourcontents {
+        height: 100%;
+        background-position: center;
+    }
+    .tourheadingbox {
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: 20px;
+    }
+
+    .tourevents {
+        width: 100%;
+        height: auto;
+        background: transparent;
+        float: none;
+        
+    }
+
+    .tourevents #tourdetailrow {
+        position: relative;
+        transform: translateY(0);
+        padding: 0 20px 20px;
+    }
+
+    .tourheadingbox .tourheadingcontent {
+        padding 20px;
+    }
+
+    .tourheadingbox .tourheadingcontent h1 {
+        font-size: 40px;
+    }
+
+    .tourevents #tourdetailrow > li .tourtime {
+        width: 80px;
+        height: 80px;
+        padding: 0;
+        background: rgba(255, 255, 255, .8);
+
+    }
+
+    .tourevents #tourdetailrow > li .tourtime h3 {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .tourevents #tourdetailrow > li .tourtime h3 {
+        font-size: 20px;
+        
+    }
+
+    .tourevents #tourdetailrow > li .tourdetails {
+        width: 100%;
+        float: none;
+        padding-left: 100px;
+        background: transparent;
+    }
+
+    .tourevents #tourdetailrow > li .tourdetails a {
+        padding: 5px 5px;
+    }
+
+
+
+}
+    
+    
+/*==============================Music===========================*/
 
 /* Remove border and add padding to thumbnails */
 .thumbnail {
-  padding: 0 0 15px 0;
-  border: none;
-  border-radius: 0;
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+    background: rgba(0,0,0,.6);
+    
 }
 
 .thumbnail p {
-  margin-top: 15px;
-  color: #555;
+    margin-top: 5px;
+    color: #555;
+    padding: 0.5em;
+    
 }
+
+.albumimagecontainer {
+    position: relative;
+    width: 400px; 
+    height: 300px;
+    float: center;
+    
+    
+}
+
+.image_img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+.albumimage_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.65s;
+
+}
+
+.albumimage_overlay > * {
+    transform: translateY(20px);
+    transition: transition 0.65;
+}
+
+.albumimage_overlay:hover {
+    opacity: 1;
+}
+
+.albumimage_overlay:hover > * {
+    transform: translateY(0);
+}
+
+.albumimage_title {
+    font-size: 2em;
+    font-weight: 500;
+    
+}
+
+.albumimage_description {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+}
+
+.albumimage_overlay a {
+    color: #fff;
+    font-size: 1em;
+}
+
+
 
 /* Black buttons with extra padding and without rounded borders */
 .btn {
