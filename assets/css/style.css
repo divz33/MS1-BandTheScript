@@ -239,14 +239,18 @@ transition: transform 1.6s ease;
 
 
 
+
+
 #infoheading h1 {
     text-align: center;
-    padding-top: 50px;
+    
 }
 
 .infohistory {
     background-color: rgba(126, 89, 89, 0.521);
     margin-bottom: 50px;
+
+    
 
 }
 
